@@ -35,9 +35,10 @@ module "ansible-instance" {
 
   name = "ansible"
 
-  ami                    = "ami-0f79abea6c14ac085"
-  instance_type          = var.ec2_instance_type
-  vpc_security_group_ids = [module.netautomation_vpc.default_security_group_id]
-  subnet_id              = module.netautomation_vpc.public_subnets[0]
-  key_name               = "automation-server-key"
+  ami                         = "ami-0f79abea6c14ac085"
+  instance_type               = var.ec2_instance_type
+  vpc_security_group_ids      = [module.netautomation_vpc.default_security_group_id]
+  subnet_id                   = module.netautomation_vpc.public_subnets[0]
+  associate_public_ip_address = true
+  key_name                    = "automation-server-key"
 }
