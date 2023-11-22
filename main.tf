@@ -39,4 +39,5 @@ module "ansible-instance" {
     instance_type          = var.ec2_instance_type
     vpc_security_group_ids = [module.netautomation_vpc.default_security_group_id]
     subnet_id              = module.netautomation_vpc.public_subnets[0]
+    key_name               = "automation-server-key"
 }
