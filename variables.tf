@@ -73,5 +73,5 @@ variable "vpc_tags" {
 variable "ec2_instance_type" {
   description = "Instance Type"
   type        = string
-  default     = "t2.micro"
+  default     = "t2.medium"
 }
