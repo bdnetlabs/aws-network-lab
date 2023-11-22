@@ -1,7 +1,7 @@
 variable "my_public_ip" {
-    description = "My Public IP Address"
-    type        = string
-    sensitive = true
+  description = "My Public IP Address"
+  type        = string
+  sensitive   = true
 }
 
 ## Variables for Terraform Registery Module Versions ##
@@ -37,7 +37,7 @@ variable "vpc_cidr" {
 variable "vpc_azs" {
   description = "Availability zones for VPC"
   type        = list(string)
-  default     = ["us-east-1a, us-east-1b"]
+  default     = ["us-east-1a", "us-east-1b"]
 }
 
 variable "vpc_private_subnets" {
@@ -70,8 +70,8 @@ variable "vpc_tags" {
 ##### VPC VARIABLES #####
 #########################
 
-variable ec2_instance_type {
-    description = "Instance Type"
-    type        = string
-    default     = "t2.micro"
+variable "ec2_instance_type" {
+  description = "Instance Type"
+  type        = string
+  default     = "t2.micro"
 }
