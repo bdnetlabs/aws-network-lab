@@ -4,19 +4,6 @@ variable "my_public_ip" {
   sensitive   = true
 }
 
-## Variables for Terraform Registery Module Versions ##
-
-variable "vpc_module_version" {
-  description = "Version of Terraform Module to use"
-  type        = string
-  default     = "5.2.0"
-}
-
-variable "ec2_module_version" {
-  description = "Version of Terraform Module to use"
-  type        = string
-  default     = "5.5.0"
-}
 
 #########################
 ##### VPC VARIABLES #####
@@ -25,7 +12,7 @@ variable "ec2_module_version" {
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
-  default     = "networkautomation-vpc"
+  default     = "network-lab-vpc"
 }
 
 variable "vpc_cidr" {
