@@ -27,3 +27,20 @@ module "network_lab_vpc" {
 
   tags = var.vpc_tags
 }
+
+##### CREATE A PUBLIC ECR REPOSITORY #####
+
+resource "aws_ecrpublic_repository" "network_lab_ecr_repo" {
+  #provider = aws.us_east_1
+
+  repository_name = "network-lab-ecr-repo"
+
+  catalog_data {
+    about_text        = "An ECR for Container Images"
+    architectures     = ["ARM"]
+    description       = "An ECR for Container Images"
+    operating_systems = ["Linux"]
+    usage_text        = "Usage Text"
+  }
+
+}
