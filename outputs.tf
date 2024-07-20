@@ -10,5 +10,5 @@ output "public_subnet_list" {
 
 output "network_lab_ecr_uri" {
   description = "The URI for the ECR Repository"
-  value = aws_ecrpublic_repository.network_lab_ecr_repo.URI
+  value       = aws_ecrpublic_repository.network_lab_ecr_repo.repository_uri
 }
