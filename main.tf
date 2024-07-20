@@ -31,7 +31,7 @@ module "network_lab_vpc" {
 ##### CREATE A PUBLIC ECR REPOSITORY #####
 
 resource "aws_ecrpublic_repository" "network_lab_ecr_repo" {
-  provider = aws.us_east_1
+  #provider = aws.us_east_1
 
   repository_name = "network-lab-ecr-repo"
 
@@ -39,7 +39,6 @@ resource "aws_ecrpublic_repository" "network_lab_ecr_repo" {
     about_text        = "An ECR for Container Images"
     architectures     = ["ARM"]
     description       = "An ECR for Container Images"
-    logo_image_blob   = filebase64(image.png)
     operating_systems = ["Linux"]
     usage_text        = "Usage Text"
   }
